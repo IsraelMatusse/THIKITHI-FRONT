@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Home } from "lucide-react";
+import Home from "./pages/Home.tsx";
 import ErrorPage from "./pages/ErrorPage.tsx";
 import Login from "./pages/login.tsx";
 
@@ -12,12 +12,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <Login />,
     errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/home",
-        element: <Home />,
-      },
-    ],
+  },
+  {
+    path: "home",
+    element: <Home />,
   },
 ]);
 
