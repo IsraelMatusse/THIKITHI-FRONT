@@ -9,6 +9,7 @@ import { Input } from "../../@/components/ui/input";
 import { Button } from "../../@/components/ui/button";
 import { FcGoogle } from "react-icons/fc";
 import "tailwindcss/tailwind.css";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -47,12 +48,12 @@ export default function Home() {
 
             <p className="text-sm text-gray-500 dark:text-gray-300 flex items-center w-full">
               Não possui conta?&nbsp;
-              <a
-                href="/registrar"
+              <Link
                 className="text-primary-600 dark:text-primary-300"
+                to={"/signup"}
               >
                 Regista-se
-              </a>
+              </Link>
             </p>
           </form>
           <p className="mt-4 text-xs text-gray-500 dark:text-gray-300">
