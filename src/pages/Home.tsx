@@ -10,6 +10,7 @@ import { JSX } from "react/jsx-runtime";
 import { SVGProps } from "react";
 import "tailwindcss/tailwind.css";
 import { MusicIcon, ClubIcon, LaughIcon, ConeIcon } from "lucide-react";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
         </Link>
         <nav className="hidden md:flex items-center gap-4">
           <Link className="text-sm font-medium hover:underline" to={"/contact"}>
-            Contac-te nos
+            Contacte-nos
           </Link>
           <Link className="text-sm font-medium hover:underline" to={"/about"}>
             Sobre nós
@@ -228,6 +229,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <Footer />
       </main>
     </>
   );

@@ -1,64 +1,122 @@
+import { Image } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import { Button } from "../../@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "../../@/components/ui/card";
 import { Input } from "../../@/components/ui/input";
+import { FcGoogle } from "react-icons/fc";
+
 import { Label } from "../../@/components/ui/label";
+import "tailwindcss/tailwind.css";
+import { SVGProps } from "react";
 
 export function SignUp() {
   return (
-    <Card className="mx-auto max-w-sm">
-      <CardHeader>
-        <CardTitle className="text-xl">Sign Up</CardTitle>
-        <CardDescription>
-          Enter your information to create an account
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <div className="grid gap-4">
-          <div className="grid grid-cols-2 gap-4">
-            <div className="grid gap-2">
-              <Label htmlFor="first-name">First name</Label>
-              <Input id="first-name" placeholder="Max" required />
-            </div>
-            <div className="grid gap-2">
-              <Label htmlFor="last-name">Last name</Label>
-              <Input id="last-name" placeholder="Robinson" required />
+    <>
+      <main>
+        <div className="w-full lg:grid lg:min-h-[600px] lg:grid-cols-2 xl:min-h-[800px] bg-[#f9fcfe]">
+          <div className="flex items-center justify-center py-12">
+            <div className="mx-auto grid w-[350px] gap-6">
+              <div className="grid gap-2 text-center">
+                <h1 className="text-3xl font-bold">Sign Up</h1>
+              </div>
+              <div className="grid gap-4">
+                <form action="">
+                  <div className="grid gap-2">
+                    <Input
+                      className="mt-2 mb-4 border border-gray-300 rounded-full px-4 py-2 focus:border-indigo-600 focus:outline-none"
+                      type="email"
+                      id="email"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <div className="grid gap-2">
+                    <Input
+                      className="mt-2 mb-4 border border-gray-300 rounded-full px-4 py-2 focus:border-indigo-600 focus:outline-none"
+                      type="text"
+                      id="name"
+                      placeholder="Nome"
+                    />
+                  </div>
+
+                  <div className="grid gap-2">
+                    <Input
+                      className="mt-2 mb-4 border border-gray-300 rounded-full px-4 py-2 focus:border-indigo-600 focus:outline-none"
+                      type="number"
+                      id="msisdn"
+                      placeholder="Contacto"
+                    />
+                  </div>
+                  <div>
+                    <Input
+                      className="mt-2 mb-4 border border-gray-300 rounded-full px-4 py-2 focus:border-indigo-600 focus:outline-none"
+                      type="text"
+                      id="residence"
+                      placeholder="Residência"
+                    />
+                  </div>
+
+                  <div className="grid gap-2">
+                    <Input
+                      className="mt-2 mb-4 border border-gray-300 rounded-full px-4 py-2 focus:border-indigo-600 focus:outline-none"
+                      type="password"
+                      id="password"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <Link to={"/"}>
+                    <Button
+                      type="submit"
+                      className="w-full mt-6 bg-indigo-600 rounded-full hover:bg-indigo-700 text-white"
+                    >
+                      Cadastrar
+                    </Button>
+                  </Link>
+                </form>
+              </div>
+              <div className="mt-4 text-center text-sm">
+                Já possui conta?&nbsp;
+                <Link to={"/login"} className="underline">
+                  Faça Login
+                </Link>
+                <p className="mt-4 text-xs text-gray-500 dark:text-gray-300">
+                  © 2024 THIKITHI. Todos direitos reservados.
+                </p>
+              </div>
             </div>
           </div>
-          <div className="grid gap-2">
-            <Label htmlFor="email">Email</Label>
-            <Input
-              id="email"
-              type="email"
-              placeholder="m@example.com"
-              required
+
+          <div className="hidden bg-muted lg:block">
+            <img
+              src="/src/assets/ticket.jpg"
+              alt="Image"
+              width="1920"
+              height="1080"
+              className="h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
             />
           </div>
-          <div className="grid gap-2">
-            <Label htmlFor="password">Password</Label>
-            <Input id="password" type="password" />
-          </div>
-          <Button type="submit" className="w-full">
-            Create an account
-          </Button>
-          <Button variant="outline" className="w-full">
-            Sign up with GitHub
-          </Button>
         </div>
-        <div className="mt-4 text-center text-sm">
-          Already have an account?{" "}
-          <Link to={"/login"} className="underline">
-            Sign in
-          </Link>
-        </div>
-      </CardContent>
-    </Card>
+      </main>
+    </>
+  );
+}
+function TicketIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" />
+      <path d="M13 5v2" />
+      <path d="M13 17v2" />
+      <path d="M13 11v2" />
+    </svg>
   );
 }
