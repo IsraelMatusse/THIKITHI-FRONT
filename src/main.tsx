@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home.tsx";
@@ -12,16 +11,16 @@ import CreateEvent from "./pages/admin/CreateEvent.tsx";
 
 const router = createBrowserRouter([
   {
-    path: "/home",
+    path: "/",
     element: <Home />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "login",
+    path: "/login",
     element: <Login />,
   },
   {
-    path: "signup",
+    path: "/signup",
     element: <SignUp />,
   },
   {
@@ -30,11 +29,11 @@ const router = createBrowserRouter([
     children: [],
   },
   {
-    path: "events",
+    path: "/events",
     element: <EventsPage />,
   },
   {
-    path: "create-event",
+    path: "/create-event",
     element: <CreateEvent />,
   },
 ]);

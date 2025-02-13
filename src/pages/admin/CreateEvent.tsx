@@ -1,8 +1,3 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/Lo9ZzY863bJ
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
 import { Link } from "react-router-dom";
 import { Button } from "../../../@/components/ui/button";
 import { Input } from "../../../@/components/ui/input";
@@ -24,7 +19,6 @@ import {
 } from "../../../@/components/ui/card";
 import { SVGProps } from "react";
 import { JSX } from "react/jsx-runtime";
-import { PlusCircle } from "lucide-react";
 
 export default function CreateEvent() {
   return (

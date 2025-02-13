@@ -1,12 +1,7 @@
-import * as React from "react";
 import { Link } from "react-router-dom";
 import "tailwindcss/tailwind.css";
-
 import { Button } from "../../@/components/ui/button";
 import { Input } from "../../@/components/ui/input";
-import { Search, SearchIcon } from "lucide-react";
-import { InputText } from "./Input";
-import { InputWithButton } from "./InputWithButton";
 import { ImUser } from "react-icons/im";
 export default function NavBar() {
   return (

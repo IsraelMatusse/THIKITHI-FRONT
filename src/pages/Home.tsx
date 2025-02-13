@@ -1,15 +1,9 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/VHK3HqblITJ
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
 import { Link } from "react-router-dom";
 import { Input } from "../../@/components/ui/input";
 import { Button } from "../../@/components/ui/button";
 import { JSX } from "react/jsx-runtime";
 import { SVGProps } from "react";
 import "tailwindcss/tailwind.css";
-import { MusicIcon, ClubIcon, LaughIcon, ConeIcon } from "lucide-react";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -24,6 +18,9 @@ export default function Home() {
           <span>THIKITHI</span>
         </Link>
         <nav className="hidden md:flex items-center gap-4">
+          <Link className="text-sm font-medium hover:underline" to={"/events"}>
+            Eventos
+          </Link>
           <Link className="text-sm font-medium hover:underline" to={"/contact"}>
             Contacte-nos
           </Link>

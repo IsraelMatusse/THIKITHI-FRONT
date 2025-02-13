@@ -1,8 +1,3 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/zWtQBcgBkVe
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
 import { Link } from "react-router-dom";
 import { SVGProps } from "react";
 import "tailwindcss/tailwind.css";

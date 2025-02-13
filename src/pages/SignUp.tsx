@@ -1,5 +1,4 @@
 import "tailwindcss/tailwind.css";
-import { SVGProps } from "react";
 import { useFormik } from "formik";
 import { POST } from "../client/http-client";
 import { API_ENDPOINTS } from "../client/Endpoints";
@@ -13,7 +12,6 @@ import { ErrorHandle } from "../util/ErrorHandle";
 import { Input } from "../../@/components/ui/input";
 import { Button } from "../../@/components/ui/button";
 import * as Yup from "yup";
-import { toast } from "react-toastify";
 
 export function SignUp() {
   const navigate = useNavigate();
@@ -166,7 +164,7 @@ export function SignUp() {
                   Faça Login
                 </Link>
                 <p className="mt-4 text-xs text-gray-500 dark:text-gray-300">
-                  © 2024 THIKITHI. Todos direitos reservados.
+                  © 2025 THIKITHI. Todos direitos reservados.
                 </p>
               </div>
             </div>

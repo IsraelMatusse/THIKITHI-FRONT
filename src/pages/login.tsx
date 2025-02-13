@@ -1,11 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
-
 import { Button } from "../../@/components/ui/button";
 import { Input } from "../../@/components/ui/input";
 import { FcGoogle } from "react-icons/fc";
-
 import "tailwindcss/tailwind.css";
-import { SVGProps, useState } from "react";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import { POST } from "../client/http-client";
@@ -16,16 +13,12 @@ import {
   success_server_side,
 } from "../util/Notifications";
 import { ErrorHandle } from "../util/ErrorHandle";
-import { jwtDecode } from "jwt-decode";
 import { setAuthCredentials } from "../util/authUtils";
 import { atom, useAtom } from "jotai";
-import { User } from "../models/User";
 
 export const userLogged = atom(0);
 
 export function Login() {
-  const [user, setUser] = useState<User>();
-
   const [isUserLogged, setIsUserLogged] = useAtom(userLogged);
 
   const navigate = useNavigate();
@@ -124,7 +117,7 @@ export function Login() {
                   Regista-se
                 </Link>
                 <p className="mt-4 text-xs text-gray-500 dark:text-gray-300">
-                  © 2024 THIKITHI. Todos direitos reservados.
+                  ©2025 THIKITHI. Todos direitos reservados.
                 </p>
               </div>
             </div>
@@ -142,26 +135,5 @@ export function Login() {
         </div>
       </main>
     </>
-  );
-}
-function TicketIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" />
-      <path d="M13 5v2" />
-      <path d="M13 17v2" />
-      <path d="M13 11v2" />
-    </svg>
   );
 }
