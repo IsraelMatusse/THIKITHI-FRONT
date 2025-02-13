@@ -33,7 +33,7 @@ export function Login() {
       password: "",
     },
     validationSchema: loginSchema,
-    onSubmit: (values, { setSubmitting, resetForm }) => {
+    onSubmit: (values, { setSubmitting }) => {
       login(values, setSubmitting);
     },
   });
