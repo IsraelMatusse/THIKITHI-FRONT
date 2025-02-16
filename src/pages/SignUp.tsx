@@ -172,7 +172,7 @@ export function SignUp() {
 
           <div className="hidden bg-muted lg:block">
             <img
-              src="/src/assets/ticket.jpg"
+              src="./ticket.jpg"
               alt="Image"
               width="1920"
               height="1080"

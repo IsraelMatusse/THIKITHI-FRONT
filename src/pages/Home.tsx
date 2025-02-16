@@ -104,7 +104,7 @@ export default function Home() {
                 alt="Event Image"
                 className="object-cover w-full h-56"
                 height={300}
-                src="/src/assets/part2.jpg"
+                src="./part2.jpg"
                 style={{
                   aspectRatio: "500/300",
                   objectFit: "cover",
@@ -136,7 +136,7 @@ export default function Home() {
                 alt="Event Image"
                 className="object-cover w-full h-56"
                 height={300}
-                src="/src/assets/show.avif"
+                src="./show.avif"
                 style={{
                   aspectRatio: "500/300",
                   objectFit: "cover",
@@ -168,7 +168,7 @@ export default function Home() {
                 alt="Event Image"
                 className="object-cover w-full h-56"
                 height={300}
-                src="/src/assets/conference.jpg"
+                src="./conference.jpg"
                 style={{
                   aspectRatio: "500/300",
                   objectFit: "cover",
@@ -200,7 +200,7 @@ export default function Home() {
                 alt="Event Image"
                 className="object-cover w-full h-56"
                 height={300}
-                src="/src/assets/Corporate-Events.jpg"
+                src="./Corporate-Events.jpg"
                 style={{
                   aspectRatio: "500/300",
                   objectFit: "cover",

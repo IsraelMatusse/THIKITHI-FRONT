@@ -59,7 +59,7 @@ export default function EventsPage() {
                     alt="Avatar"
                     className="rounded-full"
                     height="32"
-                    src="/placeholder.svg"
+                    src="./login-icon.png"
                     style={{
                       aspectRatio: "32/32",
                       objectFit: "cover",
@@ -117,7 +117,7 @@ export default function EventsPage() {
                           alt="Event image"
                           className="aspect-square rounded-md object-cover"
                           height="64"
-                          src="src/assets/conference.jpg"
+                          src="./conference.jpg"
                           width="64"
                         />
                         <div>
@@ -164,7 +164,7 @@ export default function EventsPage() {
                           alt="Event image"
                           className="aspect-square rounded-md object-cover"
                           height="64"
-                          src="src/assets/Corporate-Events.jpg"
+                          src="./Corporate-Events.jpg"
                           width="64"
                         />
                         <div>
@@ -211,7 +211,7 @@ export default function EventsPage() {
                           alt="Event image"
                           className="aspect-square rounded-md object-cover"
                           height="64"
-                          src="src/assets/show.avif"
+                          src="./show.avif"
                           width="64"
                         />
                         <div>
@@ -258,7 +258,7 @@ export default function EventsPage() {
                           alt="Event image"
                           className="aspect-square rounded-md object-cover"
                           height="64"
-                          src="src/assets/part2.jpg"
+                          src="./part2.jpg"
                           width="64"
                         />
                         <div>

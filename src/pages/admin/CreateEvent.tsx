@@ -19,70 +19,12 @@ import {
 } from "../../../@/components/ui/card";
 import { SVGProps } from "react";
 import { JSX } from "react/jsx-runtime";
+import SideBar from "../../components/SideBar";
 
 export default function CreateEvent() {
   return (
     <div className="grid min-h-screen w-full overflow-hidden lg:grid-cols-[280px_1fr]">
-      <div className="hidden border-r bg-gray-100/40 lg:block dark:bg-gray-800/40">
-        <div className="flex h-full max-h-screen flex-col gap-2">
-          <div className="flex h-[60px] items-center border-b px-6">
-            <Link className="flex items-center gap-2 font-semibold" to="#">
-              <TicketIcon className="h-6 w-6" />
-              <span className="">Ticket Sales</span>
-            </Link>
-            <Button className="ml-auto h-8 w-8" size="icon" variant="outline">
-              <BellIcon className="h-4 w-4" />
-              <span className="sr-only">Toggle notifications</span>
-            </Button>
-          </div>
-          <div className="flex-1 overflow-auto py-2">
-            <nav className="grid items-start px-4 text-sm font-medium">
-              <Link
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                to="#"
-              >
-                <HomeIcon className="h-4 w-4" />
-                Dashboard
-              </Link>
-              <Link
-                className="flex items-center gap-3 rounded-lg bg-gray-100 px-3 py-2 text-gray-900  transition-all hover:text-gray-900 dark:bg-gray-800 dark:text-gray-50 dark:hover:text-gray-50"
-                to="#"
-              >
-                <TicketIcon className="h-4 w-4" />
-                Events
-              </Link>
-              <Link
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                to="#"
-              >
-                <TicketIcon className="h-4 w-4" />
-                Promotions
-              </Link>
-              <Link
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                to="#"
-              >
-                <UsersIcon className="h-4 w-4" />
-                Customers
-              </Link>
-              <Link
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                to="#"
-              >
-                <WalletIcon className="h-4 w-4" />
-                Sales
-              </Link>
-              <Link
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                to="#"
-              >
-                <SettingsIcon className="h-4 w-4" />
-                Settings
-              </Link>
-            </nav>
-          </div>
-        </div>
-      </div>
+      <SideBar />
       <div className="flex flex-col">
         <header className="flex h-14 lg:h-[60px] items-center gap-4 border-b bg-gray-100/40 px-6 dark:bg-gray-800/40">
           <Link className="lg:hidden" to="#">
@@ -94,7 +36,7 @@ export default function CreateEvent() {
               <div className="relative">
                 <SearchIcon className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-500 dark:text-gray-400" />
                 <Input
-                  className="w-full bg-white shadow-none appearance-none pl-8 md:w-2/3 lg:w-1/3 dark:bg-gray-950"
+                  className="mt-2 border border-indigo-600  rounded-full px-10 py-2 focus:border-indigo-600 focus:outline-none pl-8 md:w-2/3 lg:w-1/3 "
                   placeholder="Search events, promotions, customers..."
                   type="search"
                 />
@@ -112,7 +54,7 @@ export default function CreateEvent() {
                   alt="Avatar"
                   className="rounded-full"
                   height="32"
-                  src="/placeholder.svg"
+                  src="./login-icon.png"
                   style={{
                     aspectRatio: "32/32",
                     objectFit: "cover",
@@ -148,7 +90,7 @@ export default function CreateEvent() {
               <div className="grid grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">Nome do evento</Label>
-                  <Input id="name" placeholder="Enter event name" />
+                  <Input id="name" placeholder="Introduza o nome do Evento" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="start-date">Data de inicio</Label>
@@ -162,7 +104,7 @@ export default function CreateEvent() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="venue">Local do evento</Label>
-                  <Input id="venue" placeholder="Enter venue name" />
+                  <Input id="venue" placeholder="Introduza o local do Evento" />
                 </div>
               </div>
               <div className="space-y-2">
@@ -173,7 +115,7 @@ export default function CreateEvent() {
                 <Label htmlFor="description">Descricção do Evento</Label>
                 <Textarea
                   id="description"
-                  placeholder="Enter event description"
+                  placeholder="Introduza a descricção do Evento"
                 />
               </div>
               <div className="space-y-2">
@@ -185,15 +127,15 @@ export default function CreateEvent() {
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-2">
-                        <Label htmlFor="early-bird-start">Start Date</Label>
+                        <Label htmlFor="early-bird-start">Data de Inicio</Label>
                         <Input id="early-bird-start" type="date" />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="early-bird-end">End Date</Label>
+                        <Label htmlFor="early-bird-end">Data de Fim</Label>
                         <Input id="early-bird-end" type="date" />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="early-bird-price">Price</Label>
+                        <Label htmlFor="early-bird-price">Preço</Label>
                         <Input id="early-bird-price" type="number" />
                       </div>
                     </CardContent>
@@ -204,15 +146,15 @@ export default function CreateEvent() {
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-2">
-                        <Label htmlFor="general-start">Start Date</Label>
+                        <Label htmlFor="general-start">Data de Inicio</Label>
                         <Input id="general-start" type="date" />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="general-end">End Date</Label>
+                        <Label htmlFor="general-end">Data de Fim</Label>
                         <Input id="general-end" type="date" />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="general-price">Price</Label>
+                        <Label htmlFor="general-price">Preço</Label>
                         <Input id="general-price" type="number" />
                       </div>
                     </CardContent>
@@ -223,15 +165,15 @@ export default function CreateEvent() {
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-2">
-                        <Label htmlFor="vip-start">Start Date</Label>
+                        <Label htmlFor="vip-start">Data de Inicio</Label>
                         <Input id="vip-start" type="date" />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="vip-end">End Date</Label>
+                        <Label htmlFor="vip-end">Data de Fim</Label>
                         <Input id="vip-end" type="date" />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="vip-price">Price</Label>
+                        <Label htmlFor="vip-price">Preço</Label>
                         <Input id="vip-price" type="number" />
                       </div>
                     </CardContent>
